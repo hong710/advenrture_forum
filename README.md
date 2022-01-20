@@ -1,10 +1,14 @@
 # README
 
 -----------------FRONT-END--------------------------------------------------
-Our project wire frame for front-end
-    ![alt text](https://github.com/hong710/adventure_forum/blob/main/public/main_adventure_forum.PNG)
+<h3>Wire frame</h3>
+<img
+    src="https://user-images.githubusercontent.com/8335102/150434284-4cd5f06e-cd20-49de-846a-d860a6762f58.PNG"
+    alt="wireframe"
+    title="wireframe"
+    style="display: block; max-width: 700px">
 
-Story Pitch:
+### Story Pitch:
 Use Cases:
 
 -----------------BACK-END--------------------------------------------------

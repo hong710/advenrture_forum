@@ -1,5 +1,8 @@
 # README
 
+Our project wire frame for front-end
+    ![alt text](./main_adventure_forum.PNG)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

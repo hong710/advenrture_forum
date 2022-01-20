@@ -31,15 +31,22 @@ rails s
 # start React App
 npm start --prefix client
 ```
-* Ruby version
+<!-- * Ruby version
 
 * System dependencies
 
-* Configuration
+* Configuration -->
 
 * Database creation
 
-* Database initialization
+<img
+    src="https://user-images.githubusercontent.com/8335102/150438024-8ef81bab-7be3-4fbc-93df-dc6b115c7114.PNG"
+    alt="ERM"
+    title="ERM"
+    style="display: block; max-width: 700px">
+
+
+<!-- * Database initialization
 
 * How to run the test suite
 
@@ -47,4 +54,4 @@ npm start --prefix client
 
 * Deployment instructions
 
-* ...
+* ... -->

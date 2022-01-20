@@ -1,13 +1,25 @@
 # README
 
-Our project wire frame for front-end
-    ![alt text](https://github.com/hong710/adventure_forum/blob/main/public/main_adventure_forum.PNG)
+-----------------FRONT-END--------------------------------------------------
+<h3>Wire frame</h3>
+<img
+    src="https://user-images.githubusercontent.com/8335102/150434284-4cd5f06e-cd20-49de-846a-d860a6762f58.PNG"
+    alt="wireframe"
+    title="wireframe"
+    style="display: block; max-width: 700px">
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Story Pitch:
+Use Cases:
 
-Things you may want to cover:
+-----------------BACK-END--------------------------------------------------
+* Dev Env: How to start the server
+```ruby
+# Start rails server
+rails s
 
+# start React App
+npm start --prefix client
+```
 * Ruby version
 
 * System dependencies

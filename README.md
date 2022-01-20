@@ -1,6 +1,6 @@
 # README
 
------------------FRONT-END--------------------------------------------------
+## FRONT-END
 <h3>Wire frame</h3>
 <img
     src="https://user-images.githubusercontent.com/8335102/150434284-4cd5f06e-cd20-49de-846a-d860a6762f58.PNG"
@@ -22,7 +22,7 @@ As a user, I will be able to navigate to the ABOUT page to read about the inspir
 As a user, I will be able to see blog posts sorted from newest to oldest on the main page
 As a user, I will be able to add blog posts to a favorites list and navigate to that list to view my favorite blog posts
 
------------------BACK-END--------------------------------------------------
+## BACK-END
 * Dev Env: How to start the server
 ```ruby
 # Start rails server

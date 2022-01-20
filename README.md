@@ -2,7 +2,7 @@
 
 -----------------FRONT-END--------------------------------------------------
 Our project wire frame for front-end
-    ![alt text](./main_adventure_forum.PNG)
+    ![alt text](https://github.com/hong710/adventure_forum/blob/main/public/main_adventure_forum.PNG)
 
 Story Pitch:
 Use Cases:

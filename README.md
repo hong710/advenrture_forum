@@ -1,13 +1,21 @@
 # README
 
+-----------------FRONT-END--------------------------------------------------
 Our project wire frame for front-end
     ![alt text](./main_adventure_forum.PNG)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Story Pitch:
+Use Cases:
 
-Things you may want to cover:
+-----------------BACK-END--------------------------------------------------
+* Dev Env: How to start the server
+```ruby
+# Start rails server
+rails s
 
+# start React App
+npm start --prefix client
+```
 * Ruby version
 
 * System dependencies

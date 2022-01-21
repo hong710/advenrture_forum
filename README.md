@@ -20,15 +20,10 @@ rails s
 # start React App
 npm start --prefix client
 ```
-* Ruby version
 
-* System dependencies
+* Database Relationship
 
-* Configuration
-
-* Database creation
-
-* Database initialization
+<!-- * Database initialization
 
 * How to run the test suite
 
@@ -36,4 +31,4 @@ npm start --prefix client
 
 * Deployment instructions
 
-* ...
+* ... -->

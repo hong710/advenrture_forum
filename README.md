@@ -33,15 +33,9 @@ rails s
 # start React App
 npm start --prefix client
 ```
-<<<<<<< HEAD
-=======
-<!-- * Ruby version
->>>>>>> a851031ec81ec60b392cfb48af5f21d6e3e96ad4
 
 * Database Relationship
 
-<<<<<<< HEAD
-=======
 * Configuration -->
 
 * Database creation
@@ -53,7 +47,6 @@ npm start --prefix client
     style="display: block; max-width: 700px">
 
 
->>>>>>> a851031ec81ec60b392cfb48af5f21d6e3e96ad4
 <!-- * Database initialization
 
 * How to run the test suite

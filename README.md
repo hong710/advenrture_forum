@@ -4,8 +4,8 @@
 <h3>Wire frame</h3>
 <img
     src="https://user-images.githubusercontent.com/8335102/150434284-4cd5f06e-cd20-49de-846a-d860a6762f58.PNG"
-    alt="wireframe"
-    title="wireframe"
+    alt="wire-frame"
+    title="wire-frame"
     style="display: block; max-width: 700px">
 
 ### Story Pitch:

@@ -33,9 +33,8 @@ rails s
 # start React App
 npm start --prefix client
 ```
-<!-- * Ruby version
 
-* System dependencies
+* Database Relationship
 
 * Configuration -->
 

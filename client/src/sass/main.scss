@@ -85,6 +85,25 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+// noa's added code
+input[type="text"] {
+    border-color:#00C49A !important
+    }
+  
+    textarea[type="text"] {
+      border-color:#00C49A !important
+      }
+  
+    .login-headers, .signup-headers {
+      font-family: 'Playfair Display', serif;
+    }
+  
+    .input-group-prepend {
+      font-family: 'Playfair Display', serif;
+      color: #00C49A;
+  
+    }
+
 //Media queries
 @include media-breakpoint-up(sm) {
 

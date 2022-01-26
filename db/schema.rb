@@ -27,7 +27,8 @@ ActiveRecord::Schema.define(version: 2022_01_24_015058) do
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.string "post_title"
-    t.string "content"
+    t.string "post_url"
+    t.text "content"
     t.boolean "published"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -56,7 +57,8 @@ ActiveRecord::Schema.define(version: 2022_01_24_015058) do
     t.string "email"
     t.string "f_name"
     t.string "l_name"
-    t.string "username"
+    t.string "user_img"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

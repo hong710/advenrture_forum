@@ -85,6 +85,18 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+//login page
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(90deg, #FFFF00 0%, #009688 0%, #009688 22%, #82EE85 100%);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(90deg, #FFFF00 0%, #009688 0%, #009688 22%, #82EE85 100%);
+}
+
 //Media queries
 @include media-breakpoint-up(sm) {
 

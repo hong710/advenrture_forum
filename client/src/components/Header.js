@@ -6,6 +6,7 @@ function Header() {
 
     return (
         <header id="header-img" className="d-flex justify-content-center align-items-center">
+
             <div className="container ">
                 <div className="" >
                     <h1 className="text-center">Your adventure starts here!</h1>

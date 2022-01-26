@@ -16,27 +16,24 @@ function App() {
       <>
         <Nav />
         <Switch>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/contributors">
-          <Contributors />
-        </Route>
-        <Route exact path="/login">
-          <Login />
-        </Route>
-        <Route exact path="/signup">
-          <Signup />
-        </Route>
-        <Route exact path="/new-comment">
-        <NewComment />
-        </Route>
-        <Route exact path="/new-post">
-        <NewPost />
-        </Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/contributors">
+            <Contributors />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
+          </Route>
+          {/* <Route exact path="/new-post">
+            <NewPost />
+          </Route> */}
+          <Route exact path="/">
+            <Home />
+          </Route>
         </Switch>
         <Header />
         <Main />

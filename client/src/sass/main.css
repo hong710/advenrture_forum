@@ -12627,6 +12627,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   letter-spacing: .2em;
 }
 
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-gradient(linear, left top, right top, from(#FFFF00), color-stop(0%, #009688), color-stop(22%, #009688), to(#82EE85));
+  background: linear-gradient(90deg, #FFFF00 0%, #009688 0%, #009688 22%, #82EE85 100%);
+}
+
 @media (min-width: 992px) {
   #header-img {
     height: 45vh;
@@ -12636,6 +12645,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 @media (min-width: 1200px) {
   #header-img {
     height: 50vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  #header-img {
+    height: 60vh;
   }
 }
 /*# sourceMappingURL=main.css.map */

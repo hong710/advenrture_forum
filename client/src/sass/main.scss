@@ -38,9 +38,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 //import font
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@400;700&family=Raleway:wght@700&display=swap');
-body{
-    // font-family: 'PT Serif', serif;
-}
+
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Playfair Display', serif;
@@ -85,24 +83,17 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
-// noa's added code
-input[type="text"] {
-    border-color:#00C49A !important
-    }
-  
-    textarea[type="text"] {
-      border-color:#00C49A !important
-      }
-  
-    .login-headers, .signup-headers {
-      font-family: 'Playfair Display', serif;
-    }
-  
-    .input-group-prepend {
-      font-family: 'Playfair Display', serif;
-      color: #00C49A;
-  
-    }
+//login page
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(90deg, #FFFF00 0%, #009688 0%, #009688 22%, #82EE85 100%);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(90deg, #FFFF00 0%, #009688 0%, #009688 22%, #82EE85 100%);
+}
 
 //Media queries
 @include media-breakpoint-up(sm) {
@@ -120,8 +111,10 @@ input[type="text"] {
     #header-img{
         height:50vh;
     }
-    }
+}
 @include media-breakpoint-up(xxl) {
-    
+    #header-img{
+        height:60vh;
+    }
     
 }

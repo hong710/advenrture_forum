@@ -1,15 +1,17 @@
-import React from 'react';
+import {useParams} from "react-router-dom";
 import Comments from './Comments';
 
-function Post() {
 
-    
+function Post({posts}) {
+    const params = useParams();
+    // const post = posts.find(post => post.id === parseInt(params.postId));
+    console.log(posts);
     return (
     <main className="mt-5">
         <div className="container">
             <div className="row">
                 <div className="row col-8">
-                    <img className="object-fit-cover w-100" src="https://images.unsplash.com/photo-1458442310124-dde6edb43d10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="topic"/>   
+                    <img className="object-fit-cover w-100"  alt="topic"/>   
 
                     <h2 className="my-4">Lessons from a Tech Lead: Roles, responsibilities, and words of advice</h2>
                     <p>

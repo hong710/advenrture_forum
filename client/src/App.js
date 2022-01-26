@@ -1,8 +1,8 @@
+import React,{useEffect,useState} from "react";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Main from "./components/MainPosts";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
 import About from "./components/About";
 import Contributors from "./components/Contributors";
 import Login from "./components/Login";
@@ -11,7 +11,19 @@ import NewComment from "./components/NewComment";
 import NewPost from "./components/NewPost";
 import Post from "./components/Post";
 
+const API = "http://localhost:3000/posts"
+
 function App() {
+
+  const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        fetch(API)
+        .then(resp => resp.json())
+        .then(data => setPosts(data))
+    }, [])
+
+
   return (
     <BrowserRouter>
       <>
@@ -28,8 +40,10 @@ function App() {
         <Route exact path="/signup">
           <Signup />
         </Route>
-        <Route exact path="/post/:postId">
-          <Post />
+        
+        <Route path="/posts/:postId">
+          <Nav />
+          <Post posts = {posts}/>
         </Route>
         {/* <Route exact path="/new-post">
             <NewPost />
@@ -37,12 +51,8 @@ function App() {
         <Route exact path="/">
           <Nav />
           <Header />
-          <Main />
+          <Main posts = {posts}/>
         </Route>
-
-        {/* </Switch> */}
-        {/* <Header />
-        <Main /> */}
       </>
     </BrowserRouter>
   );

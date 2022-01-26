@@ -4,15 +4,14 @@ import Search from './Search';
 const API = "http://localhost:3000/posts"
 const usersAPI = "http://localhost:3000/users"
 
-function MainPosts() {
-    const [userPosts, setUserPosts] = useState([])
-    const [posts, setPosts] = useState([])
+function MainPosts({posts}) {
+    // const [posts, setPosts] = useState([])
 
-    useEffect(() => {
-        fetch(API)
-        .then(resp => resp.json())
-        .then(data => setPosts(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch(API)
+    //     .then(resp => resp.json())
+    //     .then(data => setPosts(data))
+    // }, [])
 
 //   useEffect(() => {
 //       fetch(usersAPI)

@@ -10,9 +10,9 @@ function NewComment() {
   <input type="text" class="form-control"/>
 </div>
   
-<div class="input-group">
+<div className="input-group">
   <div className="input-group-prepend">
-    <span class="input-group-text">Enter your comment</span>
+    <span className="input-group-text">Enter your comment</span>
   </div>
   <textarea type="text" class="form-control" aria-label="With textarea"></textarea>
 </div>

@@ -32,7 +32,8 @@ user_arr = [
     "https://randomuser.me/api/portraits/women/85.jpg",
     "https://randomuser.me/api/portraits/women/60.jpg",
     "https://randomuser.me/api/portraits/women/42.jpg",
-    "https://randomuser.me/api/portraits/women/72.jpg"
+    "https://randomuser.me/api/portraits/women/72.jpg",
+    "https://randomuser.me/api/portraits/men/14.jpg"
 ]
 
 
@@ -58,10 +59,10 @@ url_arr =[
 
 puts "seeding posts"
 
-
+j = 0
 10.times do
-    i = i + 1
-    Post.create(user_id: User.all.sample.id, post_url:url_arr[i-1] ,post_title: Faker::Lorem.sentence, content: Faker::Lorem.paragraph, published: true)
+    j = j + 1
+    Post.create(user_id: User.all.sample.id, post_url:url_arr[j-1] ,post_title: Faker::Lorem.sentence, content: Faker::Lorem.paragraph, published: true)
 end
 puts "done seeding posts"
 

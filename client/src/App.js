@@ -9,34 +9,40 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NewComment from "./components/NewComment";
 import NewPost from "./components/NewPost";
+import Post from "./components/Post";
 
 function App() {
   return (
     <BrowserRouter>
       <>
-        <Nav />
-        <Switch>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/contributors">
-            <Contributors />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/signup">
-            <Signup />
-          </Route>
-          {/* <Route exact path="/new-post">
+        {/* <Switch> */}
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/contributors">
+          <Contributors />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/signup">
+          <Signup />
+        </Route>
+        <Route exact path="/post/:postId">
+          <Post />
+        </Route>
+        {/* <Route exact path="/new-post">
             <NewPost />
           </Route> */}
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Header />
-        <Main />
+        <Route exact path="/">
+          <Nav />
+          <Header />
+          <Main />
+        </Route>
+
+        {/* </Switch> */}
+        {/* <Header />
+        <Main /> */}
       </>
     </BrowserRouter>
   );

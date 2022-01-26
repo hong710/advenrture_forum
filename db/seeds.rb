@@ -15,7 +15,7 @@ puts "done seeding categories"
 
 puts "seeding comments"
 10.times do
-Comment.create(comment: Faker::Lorem.sentences)
+Comment.create(comment: Faker::Lorem.sentence)
 end
 puts "done seeding comments"
 

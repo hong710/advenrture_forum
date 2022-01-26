@@ -101,8 +101,10 @@ h1,h2,h3,h4,h5,h6{
     #header-img{
         height:50vh;
     }
-    }
+}
 @include media-breakpoint-up(xxl) {
-    
+    #header-img{
+        height:60vh;
+    }
     
 }

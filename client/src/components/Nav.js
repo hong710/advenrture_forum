@@ -3,7 +3,7 @@ import logo from '../assets/Adventure.svg';
 
 function Nav() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light fix sticky-top">
         <div className="container">
             <a href="#" className="navbar-brand">
                 <img src={logo} height="50" alt="CoolBrand"/>

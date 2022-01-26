@@ -5,7 +5,7 @@ import Comments from './Comments';
 function Post({posts}) {
     const params = useParams();
     // const post = posts.find(post => post.id === parseInt(params.postId));
-    console.log(posts);
+    console.log(params);
     return (
     <main className="mt-5">
         <div className="container">

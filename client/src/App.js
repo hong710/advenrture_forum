@@ -10,19 +10,19 @@ import Signup from "./components/Signup";
 import NewComment from "./components/NewComment";
 import NewPost from "./components/NewPost";
 import Post from "./components/Post";
+import axios from "axios";
 
 const API = "http://localhost:3000/posts"
 
 function App() {
 
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState(null)
 
     useEffect(() => {
-        fetch(API)
-        .then(resp => resp.json())
-        .then(data => setPosts(data))
-    }, [])
-
+      axios.get(API).then((response) => {
+        setPosts(response.data);
+      });
+    }, []);
 
   return (
     <BrowserRouter>
@@ -43,7 +43,7 @@ function App() {
         
         <Route path="/posts/:postId">
           <Nav />
-          <Post posts = {posts}/>
+          {posts && <Post posts={posts}/>}
         </Route>
         {/* <Route exact path="/new-post">
             <NewPost />
@@ -51,7 +51,7 @@ function App() {
         <Route exact path="/">
           <Nav />
           <Header />
-          <Main posts = {posts}/>
+          {posts && <Main posts = {posts}/>}
         </Route>
       </>
     </BrowserRouter>

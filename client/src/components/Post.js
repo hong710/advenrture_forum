@@ -1,24 +1,25 @@
+import React, {useState,useEffect} from "react";
 import {useParams} from "react-router-dom";
 import Comments from './Comments';
 
 
+
 function Post({posts}) {
+    
     const params = useParams();
     const post = posts.find(post => post.id === parseInt(params.postId));
 
-    console.log (posts)
+    
     return (
     <main className="mt-5">
         <div className="container">
             <div className="row">
                 <div className="row col-8">
                     <img className="object-fit-cover w-100" src={post.post_url} alt="topic"/>   
-
                     <h2 className="my-4">{post.post_title}</h2>
                     <p>{post.content}</p>
 
-
-                   <Comments postComments = {post.comments} />
+                    <Comments key= {post.id} postComments = {post.comments} />
                     
                 </div>
                 <div className="row col-4 ">
@@ -40,12 +41,8 @@ function Post({posts}) {
                         </div>  
                     </div>                   
                 </div>
-
-
             </div>
-            
         </div>
-
     </main>
         
 )}

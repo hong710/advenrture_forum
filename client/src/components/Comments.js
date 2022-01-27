@@ -1,9 +1,6 @@
 import React from "react";
 
 function Comments({postComments}) {
-
-    const comments = postComments.map(c => c.comment );
-    console.log(comments);
     
     return (
         
@@ -13,9 +10,9 @@ function Comments({postComments}) {
         <div className="card">
             <div className="card-body">
                 {
-                    comments.map (c =>
-                    <>
-                        <div className="d-flex flex-start align-items-center">
+                    postComments.map (postComment =>
+                    <div key = {postComment.id}> 
+                        <div className="d-flex flex-start align-items-center" >
                             <img
                                 className="rounded-circle shadow-1-strong me-3"
                                 src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
@@ -30,12 +27,13 @@ function Comments({postComments}) {
                         </div>
 
                         <p className="mt-3 mb-4 pb-2">
-                            {c}
+                            {postComment.comment}
                         </p>
-                    </>                     
+                    </div>                        
                     )
                 }
-                
+
+
             </div>
             <div className="card-footer py-3 border-0 background-lightgreen">
                 <div className="d-flex flex-start w-100">
@@ -54,7 +52,7 @@ function Comments({postComments}) {
                         ></textarea>
                         <label
                             className="form-label"
-                            for="textAreaExample"
+                            htmlFor="textAreaExample"
                         >
                             Message
                         </label>

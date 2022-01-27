@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import Post from "./Post";
 import {Link} from "react-router-dom";
 
 function PostThumbnail({ post }) {

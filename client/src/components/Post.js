@@ -5,7 +5,8 @@ import Comments from './Comments';
 function Post({posts}) {
     const params = useParams();
     const post = posts.find(post => post.id === parseInt(params.postId));
-    console.log(params);
+
+    console.log (posts)
     return (
     <main className="mt-5">
         <div className="container">
@@ -16,7 +17,8 @@ function Post({posts}) {
                     <h2 className="my-4">{post.post_title}</h2>
                     <p>{post.content}</p>
 
-                    <Comments/>
+
+                   <Comments postComments = {post.comments} />
                     
                 </div>
                 <div className="row col-4 ">

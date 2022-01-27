@@ -1,6 +1,10 @@
 import React from "react";
 
-function Comments() {
+function Comments({postComments}) {
+
+    const comments = postComments.map(c => c.comment );
+    console.log(comments);
+    
     return (
         
     <div className="container">
@@ -8,24 +12,30 @@ function Comments() {
         <h3>Discussion</h3>
         <div className="card">
             <div className="card-body">
-                <div className="d-flex flex-start align-items-center">
-                    <img
-                        className="rounded-circle shadow-1-strong me-3"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
-                        alt="avatar"
-                        width="60"
-                        height="60"
-                    />
-                    <div>
-                        <h6 className="fw-bold text-primary mb-1">Lily Coleman</h6>
-                        <p className="text-muted small mb-0">Shared publicly - Jan 2020 </p>
-                    </div>
-                </div>
+                {
+                    comments.map (c =>
+                    <>
+                        <div className="d-flex flex-start align-items-center">
+                            <img
+                                className="rounded-circle shadow-1-strong me-3"
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
+                                alt="avatar"
+                                width="60"
+                                height="60"
+                            />
+                            <div>
+                                <h6 className="fw-bold text-primary mb-1">Lily Coleman</h6>
+                                <p className="text-muted small mb-0">Shared publicly - Jan 2020 </p>
+                            </div>
+                        </div>
 
-                <p className="mt-3 mb-4 pb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboret dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip consequat.
-                </p>
-
+                        <p className="mt-3 mb-4 pb-2">
+                            {c}
+                        </p>
+                    </>                     
+                    )
+                }
+                
             </div>
             <div className="card-footer py-3 border-0 background-lightgreen">
                 <div className="d-flex flex-start w-100">

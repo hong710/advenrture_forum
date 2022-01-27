@@ -4,22 +4,21 @@ import Comments from './Comments';
 
 function Post({posts}) {
     const params = useParams();
-    // const post = posts.find(post => post.id === parseInt(params.postId));
-    console.log(params);
+    const post = posts.find(post => post.id === parseInt(params.postId));
+
+    console.log (posts)
     return (
     <main className="mt-5">
         <div className="container">
             <div className="row">
                 <div className="row col-8">
-                    <img className="object-fit-cover w-100"  alt="topic"/>   
+                    <img className="object-fit-cover w-100" src={post.post_url} alt="topic"/>   
 
-                    <h2 className="my-4">Lessons from a Tech Lead: Roles, responsibilities, and words of advice</h2>
-                    <p>
-                    I’ve been a tech lead for several years at a few different companies. Each role has been somewhat unique, and yet there have been commonalities between each experience. In this article I’d like to share with you what a tech lead is, what they do, and some lessons that I’ve learned along the way.
-                    The first thing to know is that a tech lead is not a manager. A tech lead is still an individual contributor and is expected to be a high producer of work while also helping the team. The tech lead is usually a more senior member of the team, but they don’t always have to be. Since the tech lead doesn’t have any direct reports, they don’t have 1on1s with their team members or do performance reviews. They do, however, help mentor their teammates
-                    </p>
+                    <h2 className="my-4">{post.post_title}</h2>
+                    <p>{post.content}</p>
 
-                    <Comments/>
+
+                   <Comments postComments = {post.comments} />
                     
                 </div>
                 <div className="row col-4 ">

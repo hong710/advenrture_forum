@@ -1,4 +1,15 @@
-# README
+### Working
+* Create the routing API associate with users_comments_post
+* Create the comments for every post.
+* Create the post
+* Update The Posts
+* Delete post
+    * Delete the comments
+* Login and sign up
+
+
+
+<!-- # README
 
 
 ## FRONT-END
@@ -38,7 +49,7 @@ npm start --prefix client
 
 * Configuration -->
 
-* Database creation
+* Database creation -->
 
 <img
     src="https://user-images.githubusercontent.com/8335102/150438024-8ef81bab-7be3-4fbc-93df-dc6b115c7114.PNG"

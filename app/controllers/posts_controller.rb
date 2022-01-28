@@ -9,7 +9,8 @@ class PostsController < ApplicationController
 
     def show
         post = Post.find(params[:id])
-        render json: post, status: :ok
+        filter = post.comments.users
+        render json: filter, status: :ok
     end
 
     def index

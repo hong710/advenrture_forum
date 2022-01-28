@@ -50,7 +50,7 @@ function Comments({postComments, post_params}) {
                 })
                 .then (res => res.json())
                 .then (data =>{
-                    console.log(data)
+                    //console.log(data)
             })
     },[commentId])
 
@@ -68,13 +68,13 @@ function Comments({postComments, post_params}) {
                         <div className="d-flex flex-start align-items-center" >
                             <img
                                 className="rounded-circle shadow-1-strong me-3"
-                                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
+                                src="https://st2.depositphotos.com/5682790/10456/v/600/depositphotos_104564156-stock-illustration-male-user-icon.jpg"
                                 alt="avatar"
                                 width="60"
                                 height="60"
                             />
                             <div>
-                                <h6 className="fw-bold text-primary mb-1">Lily Coleman</h6>
+                                <h6 className="fw-bold text-primary mb-1">Anonymous user</h6>
                                 <p className="text-muted small mb-0">Shared publicly - Jan 2020 </p>
                             </div>
                         </div>
@@ -82,6 +82,7 @@ function Comments({postComments, post_params}) {
                         <p className="mt-3 mb-4 pb-2">
                             {postComment.comment}
                         </p>
+                        <hr></hr>
                     </div>                        
                     )
                 }
@@ -92,11 +93,11 @@ function Comments({postComments, post_params}) {
                 <div className="d-flex flex-start w-100">
                     <img
                         className="rounded-circle shadow-1-strong me-3"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
+                        src="https://st2.depositphotos.com/5682790/10456/v/600/depositphotos_104564156-stock-illustration-male-user-icon.jpg"
                         alt="avatar"
-                        width="40"
-                        height="40"
-                    />
+                        width="60"
+                        height="60"
+                        />
                     <div className="form-outline w-100">
                         <textarea
                             className="form-control"

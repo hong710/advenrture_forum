@@ -9,6 +9,15 @@ function Post({posts}) {
     const params = useParams();
     const post = posts.find(post => post.id === parseInt(params.postId));
 
+    const [postsUser, setPostUser] = useState("");
+
+    useEffect(()=>{
+        fetch("http://localhost:3000/users/"+post.user.id)
+        .then(res => res.json())
+        .then(data => setPostUser(data))
+    },[])
+
+    console.log(postsUser);
     
     return (
     <main className="mt-5">
@@ -26,16 +35,22 @@ function Post({posts}) {
                     <div>
                         <div className=" rounded p-0 border border-lightgreen">
                             <div className="d-flex align-items-center bg-lightgreen p-2 ">
-                                <img className="rounded-circle img-user " src="https://randomuser.me/api/portraits/men/36.jpg" alt="user"/>
-                                <h5 className="m-0 px-2 text-white">John Doe</h5>
+                                <img className="rounded-circle img-user " src={post.user.user_img} alt="user"/>
+                                <h5 className="m-0 px-2 text-white">{post.user.f_name} {post.user.l_name}</h5>
                             </div>
                             <div className="p-2">
-                                <p className="lead">Senior software engineer. Continuous learner. </p>
-                                <h5 >More post from John Doe</h5>
+                                <p className="lead">{post.user.user_info} </p>
+                                <h5 >More post from {post.user.f_name} {post.user.l_name}</h5>
                                 <ul>
-                                    <li>Backend Engineering Skills Are Emphasized Too Heavily for Principal Engineers</li>
-                                    <li>Death to Tribal Knowledge</li>
-                                    <li>AI-Assisted Coding with Tabnine</li>
+                                    {
+                                        postsUser && postsUser.map(title =>
+                                        <a href={"http://localhost:4000/posts/"+title.id}>   
+                                            <li key = {title.id}>{title.post_title}</li>
+                                        </a>
+                                            
+                                        )
+                                    }
+                                    
                                 </ul>
                             </div>
                         </div>  

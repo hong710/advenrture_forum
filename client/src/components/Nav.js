@@ -31,18 +31,8 @@ function Nav() {
               ABOUT
             </p>
             </NavLink>
-            <NavLink to="/new-comment" exact>
-            <p className="nav-item nav-link text-lightgreen">
-              CREATE NEW COMMENT
-            </p>
-            </NavLink>
           </div>
           <div>
-          <NavLink to="/new-post" exact>
-            <p className="nav-item nav-link text-lightgreen">
-              CREATE NEW POST
-            </p>
-            </NavLink>
           </div>
           <div className="navbar-nav ms-auto">
               <NavLink to="/login" exact>

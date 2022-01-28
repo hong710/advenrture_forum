@@ -86,7 +86,7 @@ GEM
       i18n (>= 1.6, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    i18n (1.9.0)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
     io-wait (0.2.1)
@@ -179,6 +179,7 @@ DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
   debug
   faker
+  i18n (= 1.9.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.1)
@@ -189,4 +190,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.2.30
+   2.3.6

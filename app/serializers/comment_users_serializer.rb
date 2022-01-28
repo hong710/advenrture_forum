@@ -1,4 +1,5 @@
 class CommentUsersSerializer < ActiveModel::Serializer
-  attributes :id, :f_name, :l_name
-
+  attributes :id, :user_id, :comment_id
+  has_one :user
+  has_one :comment
 end

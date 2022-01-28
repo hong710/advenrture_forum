@@ -13,7 +13,8 @@ class PostsController < ApplicationController
     end
 
     def index
-        render json: Post.all, status: :ok
+        posts= Post.all
+        render json: posts, status: :ok
     end
 
     def updated

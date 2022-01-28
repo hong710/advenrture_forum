@@ -19,7 +19,7 @@ function Post({posts}) {
                     <h2 className="my-4">{post.post_title}</h2>
                     <p>{post.content}</p>
 
-                    <Comments key= {post.id} postComments = {post.comments} />
+                    <Comments key= {post.id} postComments = {post.comments} post_params={params.postId} />
                     
                 </div>
                 <div className="row col-4 ">

@@ -1,6 +1,59 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 
-function Comments({postComments}) {
+function Comments({postComments, post_params}) {
+    
+    const [comment, setComment] = useState("");
+    const [commentId, setCommentId] = useState(null);
+
+    function handleComment (e){
+        setComment(e.target.value);
+    }
+
+    function handleCancel(){
+        setComment("");
+    }
+
+    function submitComment (e){
+        
+        const data = {
+            comment: comment
+        }
+
+        e.preventDefault();
+        fetch("http://localhost:3000/comments",{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then (res => res.json())
+        .then (data =>{
+            setCommentId (data.id);
+        })
+
+        setComment("");
+        
+    }
+
+    useEffect (()=>{
+        let idMatch = {
+            post_id: post_params,
+            comment_id:commentId
+        }
+        fetch("http://localhost:3000/posts_comments",{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(idMatch)
+                })
+                .then (res => res.json())
+                .then (data =>{
+                    console.log(data)
+            })
+    },[commentId])
+
     
     return (
         
@@ -48,7 +101,9 @@ function Comments({postComments}) {
                         <textarea
                             className="form-control"
                             id="textAreaExample"
-                            rows="4"
+                            rows="3"
+                            value ={comment}
+                            onChange={handleComment}
                         ></textarea>
                         <label
                             className="form-label"
@@ -62,12 +117,14 @@ function Comments({postComments}) {
                     <button
                         type="button"
                         className="btn btn-primary btn-sm"
+                        onClick={submitComment}
                     >
                         Post comment
                     </button>
                     <button
                         type="button"
                         className="btn btn-outline-primary btn-sm"
+                        onClick={handleCancel}
                     >
                         Cancel
                     </button>

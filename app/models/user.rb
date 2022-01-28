@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_secure_password
     has_many :posts, dependent: :destroy
     has_many :users_comments
     has_many :comments, through: :users_comments

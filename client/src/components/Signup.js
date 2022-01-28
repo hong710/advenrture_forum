@@ -43,6 +43,11 @@ function Signup() {
     fetch(usersAPI, configObj)
       .then((resp) => resp.json())
       .then((data) => console.log(data));
+
+      setFirstName("")
+      setLastName("")
+      setEmail("")
+      setPassword("")
   }
 
   console.log("first name", firstName)

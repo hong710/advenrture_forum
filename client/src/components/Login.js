@@ -13,6 +13,9 @@ function handlePasswordOnChange(event) {
     setPassword(event.target.value);
   }
 
+  console.log(email)
+  console.log(password)
+
     const userCreds = {
         email: email,
         password: password,
@@ -31,6 +34,9 @@ function handlePasswordOnChange(event) {
         fetch(loginAPI, configObj)
           .then((resp) => resp.json())
           .then((data) => console.log(data));
+
+          setPassword("")
+          setEmail("")
       }
 
 
@@ -49,13 +55,13 @@ function handlePasswordOnChange(event) {
                             <p className=" mb-5">Please enter your login and password!</p>
 
                             <div className="form-outline mb-4">
-                                <input type="email" id="typeEmailX" className="form-control form-control-lg" />
-                                <label className="form-label" htmlFor="typeEmailX" value={email} onChange={handleEmailOnChange}>Email</label>
+                                <input type="email" id="typeEmailX" className="form-control form-control-lg" value={email} onChange={handleEmailOnChange}/>
+                                <label className="form-label" htmlFor="typeEmailX">Email</label>
                             </div>
 
                             <div className="form-outline mb-4">
-                                <input type="password" id="typePasswordX" className="form-control form-control-lg" />
-                                <label className="form-label" htmlFor="typePasswordX" value={password} onChange={handlePasswordOnChange}>Password</label>
+                                <input type="password" id="typePasswordX" className="form-control form-control-lg" value={password} onChange={handlePasswordOnChange}/>
+                                <label className="form-label" htmlFor="typePasswordX">Password</label>
                             </div>
 
                             <p className="small mb-5 pb-lg-2"><a className="" href="#!">Forgot password?</a></p>

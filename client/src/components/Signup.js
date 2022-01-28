@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 const usersAPI = "http://localhost:3000/users";
+
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -41,8 +43,11 @@ function Signup() {
     e.preventDefault();
 
     fetch(usersAPI, configObj)
-      .then((resp) => resp.json())
-      .then((data) => console.log(data));
+      .then((resp) => {if (resp.ok) {
+          return window.location.href = "/"
+      }
+          return resp.json()
+      }).then((data) => console.log(data));
 
       setFirstName("")
       setLastName("")
@@ -140,11 +145,10 @@ function Signup() {
 
                 <div>
                   <p className="mb-0">
-                    Already have an account?{" "}
-                    <a href="#!" className="fw-bold">
-                      Sign in
-                    </a>
-                  </p>
+                    Already have an account?{" "} </p>
+                    <NavLink to="/login">
+                            <p className="fw-bold">Sign In</p>
+                                </NavLink>
                 </div>
               </div>
             </div>

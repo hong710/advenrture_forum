@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { NavLink } from 'react-router-dom';
 const loginAPI = "http://localhost:3000/login"
 
 function Login() {
@@ -32,8 +33,11 @@ function handlePasswordOnChange(event) {
         e.preventDefault();
     
         fetch(loginAPI, configObj)
-          .then((resp) => resp.json())
-          .then((data) => console.log(data));
+          .then((resp) => {if (resp.ok) {
+            return window.location.href = "/"
+        }
+            return resp.json()
+        }).then((data) => console.log(data));
 
           setPassword("")
           setEmail("")
@@ -77,7 +81,9 @@ function handlePasswordOnChange(event) {
                             </div>
 
                             <div>
-                            <p className="mb-0">Don't have an account? <a href="#!" className="fw-bold">Sign Up</a></p>
+                            <p className="mb-0">Don't have an account?</p> <NavLink to="/signup">
+                            <p className="fw-bold">Sign Up</p>
+                                </NavLink>
                             </div>
 
                         </div>

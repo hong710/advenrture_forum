@@ -39,7 +39,7 @@ user_arr = [
 
 10.times do
     i = i + 1
-    User.create(email:Faker::Internet.email, user_img:user_arr[i-1] ,f_name: Faker::Name.first_name, l_name: Faker::Name.last_name)
+    User.create(email:Faker::Internet.email, user_info: Faker::Lorem::sentence(word_count: 10), user_img:user_arr[i-1] ,f_name: Faker::Name.first_name, l_name: Faker::Name.last_name)
 end
 puts "done seeding users"
 
@@ -54,15 +54,19 @@ url_arr =[
     "https://images.unsplash.com/photo-1582711012124-a56cf82307a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2140&q=80",
     "https://images.unsplash.com/photo-1472653816316-3ad6f10a6592?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
     "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+    "https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "https://images.unsplash.com/photo-1643335099791-dfd996887329?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1675&q=80",
+    "https://images.unsplash.com/photo-1514884025921-b2fcdef84707?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    "https://images.unsplash.com/photo-1509866899599-a1144f7e54ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+    
 ]
 
 puts "seeding posts"
 
 j = 0
-10.times do
+13.times do
     j = j + 1
-    Post.create(user_id: User.all.sample.id, post_url:url_arr[j-1] ,post_title: Faker::Lorem.sentence, content: Faker::Lorem.paragraph, published: true)
+    Post.create(user_id: User.all.sample.id, post_url:url_arr[j-1] ,post_title: Faker::Lorem.paragraph, content: Faker::Lorem.paragraph(sentence_count: 50), published: true)
 end
 puts "done seeding posts"
 

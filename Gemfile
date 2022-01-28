@@ -29,6 +29,8 @@ end
 
 gem 'active_model_serializers'
 
+gem "i18n", '1.9.1' 
+
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"

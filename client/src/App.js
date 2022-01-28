@@ -29,9 +29,11 @@ function App() {
       <>
         {/* <Switch> */}
         <Route exact path="/about">
+          <Nav />
           <About />
         </Route>
         <Route exact path="/contributors">
+          <Nav />
           <Contributors />
         </Route>
         <Route exact path="/login">
@@ -40,7 +42,6 @@ function App() {
         <Route exact path="/signup">
           <Signup />
         </Route>
-        
         <Route path="/posts/:postId">
           <Nav />
           {posts && <Post posts={posts}/>}
